@@ -1,0 +1,21 @@
+services:
+  yolov8cpu:
+    container_name: yolov8cpu
+    image: raidavidyang/yolov8cpu:v1
+    restart: always
+    privileged: true
+    stdin_open: true
+    environment:
+      - APIURL=http://220.132.208.73:5170/rail
+      - SOURCE=rail_cam1
+      - CAPTION=萬華工地
+      - RTSP_URL=rtsp://user:user123456@125.228.247.68:7001/797e5e39-dcf7-7613-2279-8a16f39e7ff8?ch01.264?dev=1
+      - DETECTION_COUNT=7
+    tty: true
+    # volumes:
+    #   - ./:/app
+    logging:
+      driver: json-file
+      options:
+        max-size: "1m"
+    command: /bin/bash -c "cd /app && python app.py"
