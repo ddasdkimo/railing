@@ -65,7 +65,7 @@ def main():
                 time.sleep(0.1)
                 
             else:
-                
+                mCallAPI.callrailstats(os.getenv('SOURCE',"未曾設定"), os.getenv('CAPTION',"未曾設定"), "cambreak", "")
                 print("Stream disconnected. Attempting to reconnect...")
                 cap.release()
                 cap = reconnect_rtsp(rtsp_url)
