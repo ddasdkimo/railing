@@ -5,7 +5,7 @@ import os
 import glob
 from callapi import CallAPI
 mCallAPI = CallAPI()
-def initialize_yolo_model(model_path="best.pt"):
+def initialize_yolo_model(model_path="bestv1.pt"):
     return YOLO(model_path)
 
 def maintain_image_limit(folder, limit=1000):

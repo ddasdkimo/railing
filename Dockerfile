@@ -47,4 +47,4 @@ ENV MKL_THREADING_LAYER=GNU
 # 複製專案內容到容器內
 COPY ./ /app
 
-# docker build -t raidavid/yolov8cpu:v1 -f Dockerfile .
+# docker build -t raidavid/yolov8cpu:v2 -f Dockerfile .
